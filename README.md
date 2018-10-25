@@ -1,4 +1,4 @@
-# docker-ssrr-for-ssrpanel
+# docker-SSRR-for-SSRpanel
 
 docker run -tid --name ssrr --net=host --restart always \  
 -e DB_HOST=127.0.0.1 \  
