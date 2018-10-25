@@ -7,4 +7,4 @@ docker run -tid --name ssrr --net=host --restart always \
 -e DB_USER=ssrpanel \
 -e DB_PASSWORD=ssrpanel-password \
 -e NODE_ID=0 \
-pch18/btpanel
+pch18/ssrr
