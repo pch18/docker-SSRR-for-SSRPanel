@@ -7,11 +7,12 @@ ENV DB_USER ssrpanel
 ENV DB_PASSWORD ssrpanel-password
 ENV NODE_ID 0
 
+COPY entrypoint.sh /entrypoint.sh
 
 RUN apk add python \
     && wget -O ssrr.zip https://github.com/pch18/shadowsocksr/archive/master.zip \
     && unzip -d / ssrr.zip \
-    && rm -f ssrr.zip
+    && rm -f ssrr.zip \
+    && chmod +x /entrypoint.sh
     
-COPY entrypoint.sh /entrypoint.sh
 CMD ["/bin/sh","-c","/entrypoint.sh"]
